@@ -1,0 +1,174 @@
+.header-page {
+	display: flex;
+	background: #010101;
+	height: 64px;
+
+	.header-page__wrap {
+		width: 100%;
+		max-width: 916px;
+		display: flex;
+		justify-content: space-between;
+		border-right: 1px solid rgba(114, 113, 117, 0.5);
+	}
+
+	.header-page__menu {
+		position: relative;
+		cursor: pointer;
+		width: 100%;
+		max-width: 232px;
+		border-right: 1px solid rgba(114, 113, 117, 0.5);
+
+		span {
+			position: absolute;
+			width: 14px;
+			height: 2px;
+			background: #fff;
+			top: 45%;
+			left: 10%;
+		}
+
+		span:nth-child(1) {
+			transform: translateY(-4px);
+		}
+
+		span:nth-child(3) {
+			transform: translateY(4px);
+		}
+	}
+
+	.header-page__contact,
+	.header-page__problem,
+	.header-page__leng,
+	.header-page__cabinet,
+	.header-page__basket {
+		display: flex;
+		align-items: center;
+		position: relative;
+		font-family: 'TT Firs Neue';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		color: #FFFFFF;
+		letter-spacing: .2px;
+	}
+
+	.header-page__contact,
+	.header-page__problem {
+		&--phone {
+			margin-left: 52px;
+			text-decoration: none;
+			border-bottom: 1px solid #FFFFFF
+		}
+
+		&--tracker {
+			margin-left: 56px;
+			text-decoration: none;
+		}
+
+		&--sad {
+			margin-right: 22px;
+			text-decoration: none;
+			border-bottom: 1px dashed #FFFFFF
+		}
+
+		&--phone::before {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			content: url('../img/header/bx_bx-phone.png');
+		}
+
+		&--tracker::before {
+			position: absolute;
+			left: 203px;
+			top: 20px;
+			content: url('../img/header/tracking.png');
+		}
+
+		&--sad::before {
+			position: absolute;
+			left: -32px;
+			top: 20px;
+			content: url('../img/header/sad.png');
+		}
+	}
+
+	.header-page__leng {
+		width: 100%;
+		max-width: 85px;
+		border-right: 1px solid rgba(114, 113, 117, 0.5);
+		cursor: pointer;
+
+		span {
+			margin-left: 21px;
+
+			&::after {
+				position: absolute;
+				right: 20px;
+				top: 24px;
+				content: url('../img/header/Vector.png');
+			}
+		}
+	}
+
+	.header-page__cabinet {
+		width: 100%;
+		max-width: 144px;
+		border-right: 1px solid rgba(114, 113, 117, 0.5);
+		cursor: pointer;
+
+		span {
+			margin-left: 62px;
+
+			&::before {
+				position: absolute;
+				left: 29px;
+				top: 20px;
+				content: url('../img/header/user.png');
+			}
+		}
+	}
+
+	.header-page__basket {
+		width: 100%;
+		max-width: 64px;
+		background: #6ABB5C;
+		cursor: pointer;
+
+		img {
+			margin-left: 20px;
+
+		}
+
+		&::after {
+			position: absolute;
+			right: 15px;
+			top: 13px;
+			content: url('../img/header/basket_numb.png');
+		}
+	}
+}
+
+@media (max-width:1125px) {
+	.header-page {
+		.header-page__wrap {
+			display: none;
+			opacity: 0;
+		}
+
+		.header-page__menu {
+			max-width: 100%;
+		}
+	}
+}
+
+@media (max-width:410px) {
+	.header-page {
+
+		.header-page__leng,
+		.header-page__cabinet {
+			display: none;
+			opacity: 0;
+		}
+	}
+}

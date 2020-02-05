@@ -1,0 +1,273 @@
+.main-page {
+	height: 900px;
+}
+
+.product-wrap {
+	width: 100%;
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 90px 0;
+	display: flex;
+	justify-content: space-between;
+
+	.product-card {
+		position: relative;
+		width: 100%;
+		max-width: 390px;
+		background: #F6F6F6;
+		border-radius: 30px;
+		padding: 0 32px 15px;
+	}
+
+	.product-card__img-warning {
+		display: flex;
+		height: 120px;
+
+		.product-card__warning {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			top: 49px;
+
+			.img-wrap:nth-child(2) {
+				margin-top: 8px;
+			}
+
+			.img-wrap {
+				width: 24px;
+				height: 24px;
+
+				img {
+					width: 100%;
+					max-width: 100%;
+					height: auto;
+				}
+			}
+		}
+
+		.product-card__img {
+			width: 250px;
+			height: 134px;
+			position: absolute;
+			top: -30px;
+			left: 50%;
+			transform: translate(-50%);
+
+			img {
+				width: 100%;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	.product-card__title {
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		span {
+			font-family: 'TT Firs Neue';
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 24px;
+			letter-spacing: .4px;
+			color: #1B1B1B;
+		}
+
+		.product-card__title-vegan {
+			line-height: 21px;
+
+			img {
+				margin-left: 10px;
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+
+	.product-card__text {
+		width: 100%;
+		margin-top: 13px;
+
+		span {
+			font-family: 'Formular';
+			font-size: 14px;
+			line-height: 20px;
+			color: #727175;
+		}
+	}
+
+	.product-card__wrap {
+		display: flex;
+		align-items: center;
+		margin-top: 35px;
+		margin-bottom: 15px;
+
+		.product-card__weigth {
+			width: 72px;
+			height: 36px;
+			border: 1px solid #DCDCDC;
+			border-radius: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			font-family: 'Formular';
+			font-size: 12px;
+			line-height: 12px;
+			color: #727175;
+		}
+
+		.product-card__new-price {
+			position: relative;
+			margin-left: 20px;
+			font-family: 'TT Firs Neue';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 28px;
+			color: #6ABB5C;
+
+			span {
+				position: absolute;
+				top: -5px;
+				left: 44px;
+				font-size: 13px;
+			}
+		}
+
+		.product-card__old-price {
+			margin-left: 40px;
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 13px;
+			text-decoration-line: line-through;
+			color: #C2C2C2;
+		}
+	}
+
+	.product-card__btn {
+		width: 74px;
+		height: 74px;
+		background: #1B1B1B;
+		border-radius: 30px 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-self: flex-end;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		cursor: pointer;
+	}
+
+	.product-card__all-card {
+		width: 217px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #C2C2C2;
+		box-sizing: border-box;
+		border-radius: 30px;
+		margin-top: 30px;
+		cursor: pointer;
+		display: none;
+
+		span {
+			font-family: 'TT Firs Neue';
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 18px;
+			color: #1B1B1B;
+		}
+	}
+}
+
+@media (max-width:1125px) {
+	.product-wrap {
+		justify-content: space-around;
+
+		.product-card:nth-child(3) {
+			display: none;
+		}
+	}
+}
+
+@media (max-width:790px) {
+	.main-page {
+		height: inherit;
+	}
+
+	.product-wrap {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.product-card:nth-child(3) {
+			display: block;
+		}
+
+		.product-card {
+			margin-top: 60px;
+		}
+
+		.product-card:first-child {
+			margin-top: 0px;
+		}
+
+		.product-card__all-card {
+			display: inherit;
+		}
+	}
+}
+
+@media (max-width:410px) {
+	.product-wrap {
+		padding: 90px 15px;
+
+		.product-card__img-warning {
+			height: 85px;
+
+			.product-card__img {
+				width: 188px;
+				height: 100px;
+			}
+
+			.product-card__warning {
+				top: 25px;
+
+				.img-wrap {
+					width: 18px;
+					height: 18px;
+				}
+			}
+		}
+
+		.product-card__title {
+			span {
+				font-size: 16px;
+				line-height: 18px;
+
+			}
+
+			.product-card__title-vegan {
+				img {
+					width: 18px;
+					height: 18px;
+				}
+			}
+		}
+
+		.product-card__wrap {
+			margin-top: 20px;
+			margin-bottom: 10px;
+
+			.product-card__old-price {
+				display: none;
+				opacity: 0;
+			}
+		}
+	}
+}

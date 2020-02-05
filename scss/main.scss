@@ -1,0 +1,48 @@
+// IMPORT FONTS
+@import 'fons';
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+a {
+	color: inherit;
+}
+
+a:hover {
+	color: red;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 14px;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'TT Firs Neue';
+	width: 100%;
+	position: relative;
+	overflow-x: hidden;
+	background: #E5E5E5;
+}
+
+.g-wrap {
+	width: 100%;
+	max-width: 1440px;
+	min-width: 320px;
+	margin: 0 auto;
+	background: #fff;
+}
+
+@import 'header-page';
+@import 'product';
